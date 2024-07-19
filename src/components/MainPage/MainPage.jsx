@@ -84,7 +84,7 @@ export default function MainPage() {
                   component="img"
                   width="100%"
                   height="auto"
-                  image="/Images/Mainpage.jpg"
+                  image="/Images/Mainpage.png"
                   alt="Train on Your Own Time"
                   sx={{
                     objectFit: "cover",
