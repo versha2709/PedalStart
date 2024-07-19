@@ -92,11 +92,11 @@ export default function MentorsAndInvestors(id) {
         We’re backed by incredible
       </Typography>
       <Typography
-        variant="h1"
+        variant="h2"
         align="center"
         fontWeight="bold"
         mb={5}
-        sx={{ color: "#00C896" }}
+        sx={{ color: "#00c8ff" }}
       >
         mentors & investors
       </Typography>

@@ -1,7 +1,28 @@
-import React from "react";
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+"use client";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  IconButton,
+  Menu,
+  MenuItem,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenuClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <AppBar
       position="static"
@@ -16,71 +37,167 @@ const Navbar = () => {
             height="40px"
           />
         </Typography>
-        <Button
-          href="#About"
+        {/* Menu icon for mobile */}
+        <IconButton
+          edge="end"
           color="inherit"
-          sx={{
-            "&:hover": {
-              backgroundColor: "white",
-              color: "#2E2929",
-              borderRadius: 1,
-            },
-          }}
+          aria-label="menu"
+          sx={{ display: { xs: "block", md: "none" } }}
+          onClick={handleMenuClick}
         >
-          About
-        </Button>
-        <Button
-          href="#community"
-          color="inherit"
-          sx={{
-            "&:hover": {
-              backgroundColor: "white",
-              color: "#2E2929",
-              borderRadius: 1,
-            },
-          }}
+          <MenuIcon />
+        </IconButton>
+        {/* Navbar buttons for larger screens */}
+        <Box sx={{ display: { xs: "none", md: "flex" } }}>
+          <Button
+            href="#About"
+            color="inherit"
+            sx={{
+              "&:hover": {
+                backgroundColor: "white",
+                color: "#2E2929",
+                borderRadius: 1,
+              },
+            }}
+          >
+            About
+          </Button>
+          <Button
+            href="#community"
+            color="inherit"
+            sx={{
+              "&:hover": {
+                backgroundColor: "white",
+                color: "#2E2929",
+                borderRadius: 1,
+              },
+            }}
+          >
+            Community
+          </Button>
+          <Button
+            href="#offering"
+            color="inherit"
+            sx={{
+              "&:hover": {
+                backgroundColor: "white",
+                color: "#2E2929",
+                borderRadius: 1,
+              },
+            }}
+          >
+            Offering
+          </Button>
+          <Button
+            href="#mentors"
+            color="inherit"
+            sx={{
+              "&:hover": {
+                backgroundColor: "white",
+                color: "#2E2929",
+                borderRadius: 1,
+              },
+            }}
+          >
+            Mentors
+          </Button>
+          <Button
+            href="#FAQ"
+            color="inherit"
+            sx={{
+              "&:hover": {
+                backgroundColor: "white",
+                color: "#2E2929",
+                borderRadius: 1,
+              },
+            }}
+          >
+            FAQs
+          </Button>
+        </Box>
+        {/* Mobile menu */}
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleMenuClose}
+          sx={{ display: { xs: "block", md: "none" } }}
         >
-          Community
-        </Button>
-        <Button
-          href="#offering"
-          color="inherit"
-          sx={{
-            "&:hover": {
-              backgroundColor: "white",
-              color: "#2E2929",
-              borderRadius: 1,
-            },
-          }}
-        >
-          Offering
-        </Button>
-        <Button
-          href="#mentors"
-          color="inherit"
-          sx={{
-            "&:hover": {
-              backgroundColor: "white",
-              color: "#2E2929",
-              borderRadius: 1,
-            },
-          }}
-        >
-          Mentors
-        </Button>
-        <Button
-          href="#FAQ"
-          color="inherit"
-          sx={{
-            "&:hover": {
-              backgroundColor: "white",
-              color: "#2E2929",
-              borderRadius: 1,
-            },
-          }}
-        >
-          FAQs
-        </Button>
+          <MenuItem onClick={handleMenuClose}>
+            <Button
+              href="#About"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#2E2929",
+                  borderRadius: 1,
+                },
+              }}
+            >
+              About
+            </Button>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+            <Button
+              href="#community"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#2E2929",
+                  borderRadius: 1,
+                },
+              }}
+            >
+              Community
+            </Button>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+            <Button
+              href="#offering"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#2E2929",
+                  borderRadius: 1,
+                },
+              }}
+            >
+              Offering
+            </Button>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+            <Button
+              href="#mentors"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#2E2929",
+                  borderRadius: 1,
+                },
+              }}
+            >
+              Mentors
+            </Button>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+            <Button
+              href="#FAQ"
+              color="inherit"
+              sx={{
+                "&:hover": {
+                  backgroundColor: "white",
+                  color: "#2E2929",
+                  borderRadius: 1,
+                },
+              }}
+            >
+              FAQs
+            </Button>
+          </MenuItem>
+        </Menu>
       </Toolbar>
     </AppBar>
   );
