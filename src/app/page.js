@@ -15,39 +15,14 @@ export default function Home() {
       <Navbar />
       <div className="content-wrap">
         <MainPage />
-        <br />
-        <br />
-        <br />
         <About />
-        <br />
-        <br />
-        <br />
-        <br />
         <Community />
-        <br /> <br />
-        <br />
-        <br />
         <Offerings />
-        <br />
-        <br />
-        <br />
-        <br />
         <Selection />
-        <br />
-        <br />
-        <br />
         <MentorsAndInvestors />
-        <br />
-        <br />
-        <br />
         <Portfolio />
-        <br />
-        <br />
-        <br />
-        <br />
         <FAQ />
       </div>
-
       <Footer />
     </div>
   );

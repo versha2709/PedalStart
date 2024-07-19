@@ -17,37 +17,37 @@ function Offerings() {
             title: "24/7 Access",
             description:
               "Gain exclusive access to our innovation hub round the clock for four months, providing you with the space and resources.",
-            imgSrc: "/support1.png",
+            imgSrc: "/Images/support1.png",
           },
           {
             title: "Expert Mentorship",
             description:
               "Connect with former mentors and founders and domain experts who offer valuable guidance and insights curated to your start-up journey.",
-            imgSrc: "/24-hours-support 2.png",
+            imgSrc: "/Images/24-hours-support 2.png",
           },
           {
             title: "Team Building",
             description:
               "Find potential partners within the cohort, building a strong team for collaborations and partnerships.",
-            imgSrc: "/24-hours-support 3.png",
+            imgSrc: "/Images/24-hours-support 3.png",
           },
           {
             title: "Founder Ecosystem",
             description:
               "Join the ecosystem of fellow founders, creating opportunities for collaboration, knowledge sharing, and collective growth.",
-            imgSrc: "/24-hours-support 4.png",
+            imgSrc: "/Images/24-hours-support 4.png",
           },
           {
             title: "Investor Networking",
             description:
               "Engage with a diverse range of investors, gaining insights into their investment criteria and thought processes.",
-            imgSrc: "/24-hours-support 5.png",
+            imgSrc: "/Images/24-hours-support 5.png",
           },
           {
             title: "Access to Funding",
             description:
               "Opportunity to secure pre-seed/seed investments of up to $250,000 from the Pedestal Stars network.",
-            imgSrc: "/24-hours-support 6.png",
+            imgSrc: "/Images/24-hours-support 6.png",
           },
         ].map((offering, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
@@ -93,7 +93,7 @@ function Offerings() {
                   width={60}
                   height={60}
                   style={{
-                    filter: "invert(1)", // Invert colors to make images white
+                    filter: "invert(1)",
                   }}
                 />
               </Box>
@@ -110,21 +110,31 @@ function Offerings() {
           flexWrap: "wrap",
         }}
       >
-        <Image src="/aws.png" alt="AWS Logo" width={100} height={50} />
+        <Image src="/Images/aws.png" alt="AWS Logo" width={100} height={50} />
         <Image
-          src="/StartupMovers.png"
+          src="/Images/StartupMovers.png"
           alt="Startup Movers Logo"
           width={100}
           height={50}
         />
-        <Image src="/Notion.png" alt="Notion Logo" width={100} height={50} />
         <Image
-          src="/Starbucks.png"
+          src="/Images/Notion.png"
+          alt="Notion Logo"
+          width={100}
+          height={50}
+        />
+        <Image
+          src="/Images/Starbucks.png"
           alt="Starbucks Logo"
           width={50}
           height={50}
         />
-        <Image src="/ccd.png" alt="Cafe Dig Logo" width={100} height={50} />
+        <Image
+          src="/Images/ccd.png"
+          alt="Cafe Dig Logo"
+          width={100}
+          height={50}
+        />
       </Box>
     </Box>
   );

@@ -9,7 +9,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 
-// Styled component for circular card with image
 const Item = styled(Card)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -22,10 +21,9 @@ const Item = styled(Card)(({ theme }) => ({
   alignItems: "center",
 }));
 
-// Styled component for circular image
 const StyledCardMedia = styled(CardMedia)(({ theme }) => ({
-  borderRadius: "50%", // Circular image
-  width: 120, // Adjust the size of the image
+  borderRadius: "50%",
+  width: 120,
   height: 120,
   objectFit: "cover",
   marginBottom: theme.spacing(2),
@@ -51,58 +49,62 @@ export default function MentorsAndInvestors() {
           {
             name: "Vikas Lakhani",
             company: "InstaOffice",
-            image: "Vikas Lakhani.png",
+            image: "/Images/Vikas Lakhani.png",
           },
-          { name: "Alok Kohli", company: "Pepsico", image: "Alok Kohli.png" },
+          {
+            name: "Alok Kohli",
+            company: "Pepsico",
+            image: "/Images/Alok Kohli .png",
+          },
           {
             name: "M Ramakrishnan",
             company: "Investor",
-            image: "M Ramakrishnan.png",
+            image: "/Images/M Ramakrishnan.png",
           },
           {
             name: "Sandeep Nailwal",
             company: "Polygon",
-            image: "Sandeep Nailwal.png",
+            image: "/Images/Sandeep Nailwal.png",
           },
           {
             name: "Abhinav Kumar",
             company: "Paytm",
-            image: "Abhinav Kumar.png",
+            image: "/Images/Abhinav Kumar.png",
           },
           {
             name: "Nikhil Thomas",
             company: "Udaan",
-            image: "Nikhil Thomas.png",
+            image: "/Images/Nikhil Thomas.png",
           },
           {
             name: "Varun Miglani",
             company: "Angel Investor",
-            image: "Varun Miglani.png",
+            image: "/Images/Varun Miglani.png",
           },
           {
             name: "Neerav Jain",
             company: "Angel Investor",
-            image: "Neerav Jain.png",
+            image: "/Images/Neerav Jain.png",
           },
           {
             name: "Dhruv Kumar",
             company: "Angel Investor",
-            image: "Dhruv Kumar.png",
+            image: "/Images/Dhruv Kumar.png",
           },
           {
             name: "Priyesh Jaiswal",
             company: "Flipkart",
-            image: "Priyesh Jaiswal.png",
+            image: "/Images/Priyesh Jaiswal.png",
           },
           {
             name: "Rishav Agarwal",
             company: "Picxele",
-            image: "Rishav Agarwa.png",
+            image: "/Images/Rishav Agarwal.png",
           },
           {
             name: "Mandeep Manocha",
             company: "Cashify",
-            image: "Mandeep Manocha.png",
+            image: "/Images/Mandeep Manocha.png",
           },
         ].map((mentor, index) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>

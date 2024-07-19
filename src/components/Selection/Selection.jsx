@@ -38,7 +38,7 @@ export default function Selection() {
                     alignItems: "center",
                   }}
                 >
-                  <Image src="/x.png" width={30} height={30} alt="X" />
+                  <Image src="/Images/x.png" width={30} height={30} alt="X" />
                   <Typography
                     variant="body1"
                     sx={{ mt: 1, fontWeight: "bold" }}
@@ -73,7 +73,7 @@ export default function Selection() {
             }}
           >
             <Image
-              src="/selection.png"
+              src="/Images/selection.png"
               width={250}
               height={250}
               alt="Selection"

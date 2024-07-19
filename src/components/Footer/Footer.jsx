@@ -11,7 +11,12 @@ const Footer = () => {
       <Container width={1440} height={436}>
         <Grid container spacing={4}>
           <Grid item xs={12} sm={4}>
-            <Image src="/logo2.png" alt="Logo" width={305} height={106} />
+            <Image
+              src="/Images/logo2.png"
+              alt="Logo"
+              width={305}
+              height={106}
+            />
             <Typography variant="body2" sx={{ mt: 2 }}>
               PedalCircle is an innovation hub by PedalStart for selected
               early-stage startups to accelerate the journey in 4 months and

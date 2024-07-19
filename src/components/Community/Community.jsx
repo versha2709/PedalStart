@@ -4,7 +4,6 @@ import { Grid, Typography, Box } from "@mui/material";
 function Community() {
   return (
     <Box sx={{ padding: "2rem" }}>
-      {/* Header Section */}
       <Box
         sx={{
           backgroundColor: "aqua",
@@ -36,9 +35,7 @@ function Community() {
         successful and angel investors.
       </Typography>
 
-      {/* Boxes Section */}
       <Grid container spacing={4}>
-        {/* Row 1 */}
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <Box
             sx={{
@@ -140,7 +137,6 @@ function Community() {
           </Box>
         </Grid>
 
-        {/* Row 2 */}
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <Box
             sx={{

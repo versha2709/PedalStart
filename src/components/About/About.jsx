@@ -6,25 +6,25 @@ const cardData = [
     title: "24x7 Innovation hub",
     description:
       "Get access to dedicated Entrepreneur-in-Residence (EIR) for brainstorming and guidance.",
-    image: "/24-hours-support 1.png",
+    image: "/Images/24-hours-support 1.png",
   },
   {
     title: "Up to $250k Investment Opportunity",
     description:
       "Get access to up to $250k investment opportunity to fuel your startup's growth.",
-    image: "/24-hours-support 2.png",
+    image: "/Images/24-hours-support 2.png",
   },
   {
     title: "Free Access to Shared Resources",
     description:
       "Get free access to shared resources for tech and marketing to help your startup grow.",
-    image: "/24-hours-support 4.png",
+    image: "/Images/24-hours-support 4.png",
   },
   {
     title: "Additional Support",
     description:
       "Receive comprehensive support from industry experts and mentors.",
-    image: "/24-hours-support 5.png",
+    image: "/Images/24-hours-support 5.png",
   },
 ];
 
@@ -59,8 +59,8 @@ function About() {
         <Grid
           item
           xs={12}
-          sm={6} // 2 boxes per row on small screens and larger
-          md={6} // 2 boxes per row on medium screens
+          sm={6}
+          md={6}
           key={index}
           sx={{
             display: "flex",
@@ -75,10 +75,10 @@ function About() {
               alignItems: "center",
               width: "100%",
               maxWidth: 400,
-              height: 200, // Fixed height for uniformity
+              height: 200,
               boxShadow: 3,
               borderRadius: 2,
-              overflow: "hidden", // Ensures no overflow from the card content
+              overflow: "hidden",
               borderRadius: 10,
             }}
           >

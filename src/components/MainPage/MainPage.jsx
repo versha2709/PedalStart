@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -16,7 +15,6 @@ export default function MainPage() {
   return (
     <Box sx={{ flexGrow: 1, padding: "2rem" }}>
       <Grid container spacing={2} sx={{ maxWidth: 1200, margin: "0 auto" }}>
-        {/* Header, Paragraph, Button and Image Card */}
         <Grid container item xs={12} spacing={2} alignItems="center">
           <Grid
             item
@@ -86,7 +84,7 @@ export default function MainPage() {
                   component="img"
                   width="100%"
                   height="auto"
-                  image="/Mainpage.jpg"
+                  image="/Images/Mainpage.jpg"
                   alt="Train on Your Own Time"
                   sx={{
                     objectFit: "cover",
@@ -103,7 +101,6 @@ export default function MainPage() {
           </Grid>
         </Grid>
 
-        {/* Additional Card and Text */}
         <Grid container item xs={12} spacing={2} sx={{ marginTop: 4 }}>
           <Grid
             item
@@ -131,7 +128,7 @@ export default function MainPage() {
             >
               <Box sx={{ flexShrink: 0, marginRight: 2 }}>
                 <Image
-                  src="/growth.png"
+                  src="/Images/growth.png"
                   alt="growth"
                   width={112}
                   height={112}

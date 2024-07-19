@@ -42,7 +42,7 @@ export default function Portfolio() {
           </Box>
           <Box sx={{ textAlign: "center", mx: 2 }}>
             <Image
-              src="/GuuglyWuugly.png"
+              src="/Images/GuuglyWuugly.png"
               alt="GuuglyWuugly"
               width={202.29}
               height={53.81}
@@ -51,7 +51,7 @@ export default function Portfolio() {
           </Box>
           <Box sx={{ textAlign: "center", mx: 2 }}>
             <Image
-              src="/Surgycall.png"
+              src="/Images/Surgycall.png"
               alt="Surgycall"
               width={144.57}
               height={53.81}
@@ -60,7 +60,7 @@ export default function Portfolio() {
           </Box>
           <Box sx={{ textAlign: "center", mx: 2 }}>
             <Image
-              src="/divycard.png"
+              src="/Images/divycard.png"
               alt="divycard"
               width={174.73}
               height={53.81}

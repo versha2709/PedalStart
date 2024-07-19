@@ -15,13 +15,14 @@ export default function Navbar() {
       >
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Image src="/logo.jpg" alt="Logo" width={248} height={77} />
+            <Image src="/Images/logo.jpg" alt="Logo" width={248} height={77} />
           </Typography>
-          <Button color="inherit">Lorem</Button>
-          <Button color="inherit">Lorem</Button>
-          <Button color="inherit">Lorem</Button>
-          <Button color="inherit">Lorem</Button>
-          <Button color="inherit">Lorem</Button>
+
+          <Button color="inherit">HOME</Button>
+          <Button color="inherit">ABOUT</Button>
+          <Button color="inherit">COMMUNITY</Button>
+          <Button color="inherit">OFFERINGS</Button>
+          <Button color="inherit">FAQ</Button>
         </Toolbar>
       </AppBar>
     </Box>
