@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Container } from "@mui/material";
 import Image from "next/image";
 
 export default function Portfolio() {
@@ -22,7 +22,13 @@ export default function Portfolio() {
         >
           Our
           <br />
-          Portfolio
+          <Box
+            component="span"
+            style={{ fontWeight: "bold", fontSize: 50 }}
+            sx={{ bgcolor: "aqua", px: 1, borderRadius: "2px" }}
+          >
+            Portfolio
+          </Box>
         </Typography>
         <Box
           sx={{
@@ -33,7 +39,7 @@ export default function Portfolio() {
         >
           <Box sx={{ textAlign: "center", mx: 2 }}>
             <Image
-              src="/oopar.png"
+              src="/Images/oopar.png"
               alt="oopar"
               width={179.63}
               height={53.81}

@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 
-function Community() {
+const Community = (id) => {
   return (
-    <Box sx={{ padding: "2rem" }}>
+    <Box sx={{ padding: "2rem" }} id="community">
       <Box
         sx={{
           backgroundColor: "aqua",
@@ -36,210 +36,43 @@ function Community() {
       </Typography>
 
       <Grid container spacing={4}>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              10K+
-            </Typography>
-            <Typography variant="body2">Startup Raised Funds</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              1K+
-            </Typography>
-            <Typography variant="body2">Joined Community</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              4K+
-            </Typography>
-            <Typography variant="body2">Hrs of Founder Barnstorming</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              1K+
-            </Typography>
-            <Typography variant="body2">Hr of Mentor Discussion</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              400+
-            </Typography>
-            <Typography variant="body2">Startup Raised Funds</Typography>
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              10
-            </Typography>
-            <Typography variant="body2">Startup Raised Funds</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              50+
-            </Typography>
-            <Typography variant="body2">Successful Founders</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              20+
-            </Typography>
-            <Typography variant="body2">Micro VC Angel Network</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              100+
-            </Typography>
-            <Typography variant="body2">Active Angel Investor</Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-          <Box
-            sx={{
-              border: "2px solid black",
-              padding: "1rem",
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              borderRadius: "8px",
-              boxShadow: 2,
-            }}
-          >
-            <Typography variant="h6" sx={{ fontWeight: 700 }}>
-              18K+
-            </Typography>
-            <Typography variant="body2">Ecosystem Partners</Typography>
-          </Box>
-        </Grid>
+        {[
+          { count: "10K+", text: "Founders Joined Worktalk" },
+          { count: "1k+", text: "Joined Community" },
+          { count: "4k+", text: "Hrs of Founder Barnstorming" },
+          { count: "1k+", text: "Hr of Mentor Discussion" },
+          { count: "400+", text: "Hr of Mentor Brainstorming" },
+          { count: "10", text: "Startup Raised Funds" },
+          { count: "50+", text: "Successful Founders" },
+          { count: "20+", text: "Micro VC Angel Network" },
+          { count: "100+", text: "Active Angel Investor" },
+          { count: "18+", text: "Ecosystem Partners" },
+        ].map((item, index) => (
+          <Grid item xs={12} sm={6} md={4} lg={2} key={index}>
+            <Box
+              sx={{
+                border: "2px solid black",
+                padding: "1rem",
+                textAlign: "center",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                borderRadius: "8px",
+                boxShadow: 2,
+                backgroundColor: "#f9f9f9",
+              }}
+            >
+              <Typography variant="h6" sx={{ fontWeight: 700 }}>
+                {item.count}
+              </Typography>
+              <Typography variant="body2">{item.text}</Typography>
+            </Box>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );
-}
+};
 
 export default Community;

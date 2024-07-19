@@ -1,30 +1,89 @@
-import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Image from "next/image";
+import React from "react";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        style={{ backgroundColor: "#2E2929", borderRadius: 10 }}
-      >
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Image src="/Images/logo.jpg" alt="Logo" width={248} height={77} />
-          </Typography>
-
-          <Button color="inherit">HOME</Button>
-          <Button color="inherit">ABOUT</Button>
-          <Button color="inherit">COMMUNITY</Button>
-          <Button color="inherit">OFFERINGS</Button>
-          <Button color="inherit">FAQ</Button>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#2E2929", borderRadius: 2 }}
+    >
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Box
+            component="img"
+            src="/Images/logo.jpg"
+            alt="Logo"
+            height="40px"
+          />
+        </Typography>
+        <Button
+          href="#About"
+          color="inherit"
+          sx={{
+            "&:hover": {
+              backgroundColor: "white",
+              color: "#2E2929",
+              borderRadius: 1,
+            },
+          }}
+        >
+          About
+        </Button>
+        <Button
+          href="#community"
+          color="inherit"
+          sx={{
+            "&:hover": {
+              backgroundColor: "white",
+              color: "#2E2929",
+              borderRadius: 1,
+            },
+          }}
+        >
+          Community
+        </Button>
+        <Button
+          href="#offering"
+          color="inherit"
+          sx={{
+            "&:hover": {
+              backgroundColor: "white",
+              color: "#2E2929",
+              borderRadius: 1,
+            },
+          }}
+        >
+          Offering
+        </Button>
+        <Button
+          href="#mentors"
+          color="inherit"
+          sx={{
+            "&:hover": {
+              backgroundColor: "white",
+              color: "#2E2929",
+              borderRadius: 1,
+            },
+          }}
+        >
+          Mentors
+        </Button>
+        <Button
+          href="#FAQ"
+          color="inherit"
+          sx={{
+            "&:hover": {
+              backgroundColor: "white",
+              color: "#2E2929",
+              borderRadius: 1,
+            },
+          }}
+        >
+          FAQs
+        </Button>
+      </Toolbar>
+    </AppBar>
   );
-}
+};
+
+export default Navbar;

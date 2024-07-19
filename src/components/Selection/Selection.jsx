@@ -8,7 +8,7 @@ export default function Selection() {
   return (
     <Box sx={{ padding: 4, backgroundColor: "#f5f5f5" }}>
       <Typography variant="h3" sx={{ marginBottom: 4, textAlign: "center" }}>
-        who are we
+        Who are we
         <Typography variant="h3" sx={{ color: "#00c8ff", display: "inline" }}>
           {" "}
           selecting?
@@ -23,7 +23,7 @@ export default function Selection() {
               { label: "Early", description: "Stage" },
               { label: "Lorem", description: "" },
             ].map((item, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid item xs={12} sm={6} md={6} key={index}>
                 <Paper
                   elevation={3}
                   sx={{
@@ -41,7 +41,7 @@ export default function Selection() {
                   <Image src="/Images/x.png" width={30} height={30} alt="X" />
                   <Typography
                     variant="body1"
-                    sx={{ mt: 1, fontWeight: "bold" }}
+                    sx={{ mt: 1, fontWeight: "bold", textAlign: "center" }}
                   >
                     {item.label}
                     <br />
@@ -77,6 +77,7 @@ export default function Selection() {
               width={250}
               height={250}
               alt="Selection"
+              style={{ borderRadius: "8px" }}
             />
           </Paper>
         </Grid>

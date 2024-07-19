@@ -1,5 +1,14 @@
+"use client";
 import React from "react";
-import { Grid, Typography, Card, CardContent, CardMedia } from "@mui/material";
+import {
+  Grid,
+  Typography,
+  Card,
+  CardContent,
+  Box,
+  useTheme,
+} from "@mui/material";
+import Image from "next/image";
 
 const cardData = [
   {
@@ -28,11 +37,15 @@ const cardData = [
   },
 ];
 
-function About() {
+function About(id) {
+  const theme = useTheme();
+
   return (
-    <Grid container spacing={2} sx={{ padding: "2rem" }}>
+    <Grid container spacing={4} sx={{ padding: "2rem" }} id="About">
       <Grid item xs={12} sx={{ textAlign: "center" }}>
-        <Typography variant="h4">About</Typography>
+        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          About
+        </Typography>
         <Typography
           variant="h2"
           sx={{
@@ -40,6 +53,8 @@ function About() {
             display: "inline-block",
             padding: "0.5rem",
             marginTop: "1rem",
+            borderRadius: "8px",
+            fontWeight: "bold",
           }}
         >
           Pedal Circle
@@ -48,7 +63,12 @@ function About() {
       <Grid item xs={12} sx={{ textAlign: "center", marginTop: "2rem" }}>
         <Typography
           variant="body2"
-          sx={{ fontWeight: 700, fontSize: "1.75rem" }}
+          sx={{
+            fontWeight: 700,
+            fontSize: "1.25rem",
+            maxWidth: "800px",
+            margin: "0 auto",
+          }}
         >
           PedalCircle is an innovation hub by PedalStart for selected
           early-stage startups to accelerate the journey in 4 months and build
@@ -63,40 +83,77 @@ function About() {
           md={6}
           key={index}
           sx={{
+            position: "relative",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            mb: 4,
           }}
         >
-          <Card
+          <Box
             sx={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
+              position: "relative",
               width: "100%",
-              maxWidth: 400,
+              maxWidth: 800,
               height: 200,
-              boxShadow: 3,
-              borderRadius: 2,
-              overflow: "hidden",
-              borderRadius: 10,
+              borderBottom: `2px solid ${theme.palette.grey[300]}`,
+              padding: "1rem",
+              paddingLeft: "250px", // Adjust based on image size
             }}
           >
-            <CardMedia
-              component="img"
-              sx={{ width: 120, height: 120, objectFit: "contain" }}
-              image={card.image}
-              alt={card.title}
-            />
-            <CardContent sx={{ flex: 1 }}>
-              <Typography variant="h6" component="div">
-                {card.title}
-              </Typography>
-              <Typography variant="body2" color="textSecondary">
-                {card.description}
-              </Typography>
-            </CardContent>
-          </Card>
+            <Card
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+                justifyContent: "center",
+                width: "100%",
+                height: "100%",
+                boxShadow: 3,
+                borderRadius: 2,
+                overflow: "hidden",
+                backgroundColor: "white",
+                padding: "1rem",
+              }}
+            >
+              <CardContent>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{ fontWeight: "bold" }}
+                >
+                  {card.title}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ marginTop: "0.5rem" }}
+                >
+                  {card.description}
+                </Typography>
+              </CardContent>
+            </Card>
+            <Box
+              sx={{
+                position: "absolute",
+                left: 0,
+                top: "50%",
+                transform: "translateY(-50%)",
+                width: 180,
+                height: 180,
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={card.image}
+                alt={card.title}
+                layout="responsive"
+                width={180}
+                height={180}
+                objectFit="contain"
+              />
+            </Box>
+          </Box>
         </Grid>
       ))}
     </Grid>

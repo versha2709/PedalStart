@@ -2,9 +2,63 @@ import React from "react";
 import { Box, Grid, Typography, Paper } from "@mui/material";
 import Image from "next/image";
 
-function Offerings() {
+function OfferingCard({ title, description, imgSrc }) {
   return (
-    <Box sx={{ padding: "2rem" }}>
+    <Grid item xs={12} sm={6} md={4}>
+      <Paper
+        elevation={3}
+        sx={{
+          padding: "1rem",
+          position: "relative",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "300px",
+          borderRadius: "8px",
+        }}
+      >
+        <Typography variant="h6" sx={{ marginBottom: "1rem" }}>
+          {title}
+        </Typography>
+        <Typography variant="body2" sx={{ marginBottom: "1rem" }}>
+          {description}
+        </Typography>
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            right: 0,
+            width: "60px",
+            height: "60px",
+            borderRadius: "50%",
+            overflow: "hidden",
+            backgroundColor: "black",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: 1,
+          }}
+        >
+          <Image
+            src={imgSrc}
+            alt={`${title} Icon`}
+            width={60}
+            height={60}
+            style={{
+              filter: "invert(1)",
+            }}
+          />
+        </Box>
+      </Paper>
+    </Grid>
+  );
+}
+
+function Offerings(id) {
+  return (
+    <Box sx={{ padding: "2rem" }} id="offering">
       <Typography
         variant="h2"
         sx={{ marginBottom: "2rem", textAlign: "center" }}
@@ -50,55 +104,12 @@ function Offerings() {
             imgSrc: "/Images/24-hours-support 6.png",
           },
         ].map((offering, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <Paper
-              elevation={3}
-              sx={{
-                padding: "1rem",
-                position: "relative",
-                textAlign: "center",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "300px",
-                borderRadius: "8px",
-              }}
-            >
-              <Typography variant="h6" sx={{ marginBottom: "1rem" }}>
-                {offering.title}
-              </Typography>
-              <Typography variant="body2" sx={{ marginBottom: "1rem" }}>
-                {offering.description}
-              </Typography>
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: 0,
-                  right: 0,
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  overflow: "hidden",
-                  backgroundColor: "black",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: 1,
-                }}
-              >
-                <Image
-                  src={offering.imgSrc}
-                  alt={`${offering.title} Icon`}
-                  width={60}
-                  height={60}
-                  style={{
-                    filter: "invert(1)",
-                  }}
-                />
-              </Box>
-            </Paper>
-          </Grid>
+          <OfferingCard
+            key={index}
+            title={offering.title}
+            description={offering.description}
+            imgSrc={offering.imgSrc}
+          />
         ))}
       </Grid>
 

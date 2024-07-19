@@ -1,35 +1,36 @@
-/* globals.css */
-
-/* Ensure the html and body take up the full height of the viewport */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Container to ensure the page occupies the full viewport height */
+
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Wrapper for content that grows to fill available space */
 .content-wrap {
   flex: 1;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* Optionally, you might want to add styling for the main content or sections */
 .content-wrap > * {
   margin: 1rem;
 }
 
-/* Additional global styles for better appearance */
 body {
-  background-color: #f4f4f4; /* Example background color */
-  color: #333; /* Example text color */
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 .offeringsContainer {

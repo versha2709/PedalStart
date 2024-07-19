@@ -13,8 +13,9 @@ import { CardActionArea } from "@mui/material";
 
 export default function MainPage() {
   return (
-    <Box sx={{ flexGrow: 1, padding: "2rem" }}>
+    <Box sx={{ flexGrow: 1, padding: { xs: "1rem", md: "2rem" } }}>
       <Grid container spacing={2} sx={{ maxWidth: 1200, margin: "0 auto" }}>
+        {/* Top Section */}
         <Grid container item xs={12} spacing={2} alignItems="center">
           <Grid
             item
@@ -24,16 +25,27 @@ export default function MainPage() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              height: "100%",
-              padding: 2,
+              height: "auto",
+              padding: { xs: 1, md: 2 },
             }}
           >
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 2 }}>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
               Accelerating Growth
               <br />
               Driving Success
             </Typography>
-            <Typography variant="body1" gutterBottom sx={{ mb: 2 }}>
+            <Typography
+              variant="body1"
+              gutterBottom
+              sx={{ mb: 2, textAlign: { xs: "center", md: "left" } }}
+            >
               PedalCircle is an offline acceleration cohort by PedalStart,
               giving handpicked startups access to a 24x7 offline innovation
               hub, mentorship from industry experts, and up to $250k investment
@@ -42,7 +54,7 @@ export default function MainPage() {
             <Button
               variant="outlined"
               sx={{
-                width: "100%",
+                width: { xs: "100%", md: "auto" },
                 maxWidth: 250,
                 color: "#2E2929",
                 borderColor: "#2E2929",
@@ -51,6 +63,7 @@ export default function MainPage() {
                   backgroundColor: "#2E2929",
                   color: "#FFFFFF",
                 },
+                alignSelf: { xs: "center", md: "flex-start" },
               }}
             >
               Start your Journey
@@ -64,7 +77,8 @@ export default function MainPage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height: "100%",
+              height: "auto",
+              padding: { xs: 1, md: 2 },
             }}
           >
             <Card
@@ -73,10 +87,9 @@ export default function MainPage() {
                 maxWidth: 500,
                 backgroundColor: "#2E2929",
                 color: "#FFFFFF",
-                height: "100%",
-                display: "flex",
-                flexDirection: "column",
                 borderRadius: 2,
+                overflow: "hidden",
+                boxShadow: 3,
               }}
             >
               <CardActionArea>
@@ -84,7 +97,7 @@ export default function MainPage() {
                   component="img"
                   width="100%"
                   height="auto"
-                  image="/Images/Mainpage.png"
+                  image="/Images/Mainpage.jpg"
                   alt="Train on Your Own Time"
                   sx={{
                     objectFit: "cover",
@@ -101,6 +114,7 @@ export default function MainPage() {
           </Grid>
         </Grid>
 
+        {/* Bottom Section */}
         <Grid container item xs={12} spacing={2} sx={{ marginTop: 4 }}>
           <Grid
             item
@@ -109,21 +123,22 @@ export default function MainPage() {
             sx={{
               display: "flex",
               alignItems: "center",
-              height: "100%",
+              padding: { xs: 1, md: 2 },
             }}
           >
             <Card
               sx={{
                 width: "100%",
                 maxWidth: 795,
-                height: 200,
+                height: "auto",
                 borderRadius: 2,
                 backgroundColor: "#2E2929",
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { xs: "column", md: "row" },
                 alignItems: "center",
                 color: "#FFFFFF",
                 padding: 2,
+                boxShadow: 3,
               }}
             >
               <Box sx={{ flexShrink: 0, marginRight: 2 }}>
@@ -136,9 +151,12 @@ export default function MainPage() {
               </Box>
               <CardContent sx={{ flex: 1 }}>
                 <Typography
-                  variant="h4"
+                  variant="h5"
                   component="div"
-                  sx={{ fontWeight: 700, textAlign: "left" }}
+                  sx={{
+                    fontWeight: 700,
+                    textAlign: { xs: "center", md: "left" },
+                  }}
                 >
                   Ready to Grow Your Venture?
                 </Typography>
@@ -154,8 +172,7 @@ export default function MainPage() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height: "100%",
-              padding: 2,
+              padding: { xs: 1, md: 2 },
             }}
           >
             <Box
@@ -164,12 +181,12 @@ export default function MainPage() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "100%",
+                height: "auto",
               }}
             >
               <Typography
                 variant="body1"
-                sx={{ textAlign: "center", fontSize: 24 }}
+                sx={{ textAlign: "center", fontSize: { xs: 18, md: 24 } }}
               >
                 Join our outcome-driven offline program where startups receive
                 expert support and access to PedalStart’s shared resources.
