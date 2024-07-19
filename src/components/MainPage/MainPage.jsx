@@ -15,7 +15,6 @@ export default function MainPage() {
   return (
     <Box sx={{ flexGrow: 1, padding: { xs: "1rem", md: "2rem" } }}>
       <Grid container spacing={2} sx={{ maxWidth: 1200, margin: "0 auto" }}>
-        {/* Top Section */}
         <Grid container item xs={12} spacing={2} alignItems="center">
           <Grid
             item
@@ -97,7 +96,7 @@ export default function MainPage() {
                   component="img"
                   width="100%"
                   height="auto"
-                  image="/Images/Mainpage.jpg"
+                  image="/Images/Mainpage.png"
                   alt="Train on Your Own Time"
                   sx={{
                     objectFit: "cover",
@@ -114,7 +113,6 @@ export default function MainPage() {
           </Grid>
         </Grid>
 
-        {/* Bottom Section */}
         <Grid container item xs={12} spacing={2} sx={{ marginTop: 4 }}>
           <Grid
             item
